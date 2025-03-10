@@ -16,8 +16,9 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 async def index(request: Request):
     """Serve the main page with HTMX integration"""
     return templates.TemplateResponse(
+        request,
         "index.html",
-        {"request": request, "count": 0}
+        {"count": 0}
     )
 
 @app.get("/count/{current_count}", response_class=HTMLResponse)

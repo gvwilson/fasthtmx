@@ -11,3 +11,9 @@ dependencies = [
     "ruff>=0.9.10",
     "uvicorn>=0.34.0",
 ]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.5",
+    "httpx>=0.26.0",
+]
