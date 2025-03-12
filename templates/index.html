@@ -4,6 +4,7 @@
     <title>HTMX + FastAPI Example</title>
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <link rel="stylesheet" href="/static/neat.css">
+    <link rel="stylesheet" href="/static/styles.css">
   </head>
   <body>
     <h1>HTMX + FastAPI Example</h1>
@@ -17,7 +18,7 @@
     
     <div class="form-container">
       <h2>Form Example</h2>
-      <form hx-post="/submit" hx-target="#result">
+      <form hx-post="/submit" hx-target="#result" hx-swap="outerHTML">
         <p>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name">
